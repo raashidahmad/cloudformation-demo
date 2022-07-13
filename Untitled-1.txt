@@ -1,0 +1,1 @@
+"D:/AWSPracticeCodes/CloudFormationSQS/deployment.yaml"
