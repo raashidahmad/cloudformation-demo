@@ -7,6 +7,10 @@ Parameters:
   Type: String
 
 Resources:
+ sqsQueue:
+  Type: AWS::SQS::Queue
+  Properties:
+   QueueName: !Sub demo-cloudformation-queue-${Environment}
 
  lambdaFunctionIamRole:
   Type: AWS::IAM::Role
