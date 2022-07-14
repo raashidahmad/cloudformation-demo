@@ -65,12 +65,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
         
-    #- name: Deploy to AWS CloudFormation
-      #uses: aws-actions/aws-cloudformation-github-deploy@v1
-      #with:
-       #name: CloudFormationStack
-       #template: artifact/deployment.yaml
-       #parameter-overrides: "Environment=Test"
+    - name: Deploy to AWS CloudFormation
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+      with:
+       name: CloudFormationStack
+       template: artifact/deployment.yaml
+       parameter-overrides: "Environment=-Test"
 
 
       
